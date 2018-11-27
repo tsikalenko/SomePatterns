@@ -5,7 +5,7 @@ import com.gmail.tsikalenko.nikita.singleton.Fishes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Malling implements Observed{
+public class Malling implements Observed {
 
     List<Observer> subscraibers = new ArrayList<Observer>();
 
@@ -18,7 +18,7 @@ public class Malling implements Observed{
     }
 
     public void notifyAllObserver() {
-        for(Observer subsc : subscraibers){
+        for (Observer subsc : subscraibers) {
             subsc.handleEvent(Fishes.getFishes().getAllFish());
         }
     }

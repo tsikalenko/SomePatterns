@@ -1,6 +1,6 @@
 package com.gmail.tsikalenko.nikita.decorator;
 
-public class Fisherman implements IFishWorker{
+public class Fisherman implements IFishWorker {
 
     IFishWorker fishWorker;
 

@@ -1,8 +1,8 @@
 package com.gmail.tsikalenko.nikita.decorator;
 
-public class MaterFisherman extends Fisherman {
+public class MasterFisherman extends Fisherman {
 
-    public MaterFisherman(IFishWorker fishWorker) {
+    public MasterFisherman(IFishWorker fishWorker) {
         super(fishWorker);
     }
 

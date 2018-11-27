@@ -11,22 +11,22 @@ public class Fishes {
     private Fishes() {
     }
 
-    public static synchronized Fishes getFishes(){
-        if(fishes == null){
+    public static synchronized Fishes getFishes() {
+        if (fishes == null) {
             fishes = new Fishes();
         }
         return fishes;
     }
 
-    public void addFish(String newFish){
+    public void addFish(String newFish) {
         fishList.add(newFish);
     }
 
-    public  void removeFish(String fish){
+    public void removeFish(String fish) {
         fishList.remove(fish);
     }
 
-    public List<String> getAllFish(){
+    public List<String> getAllFish() {
         return fishList;
     }
 

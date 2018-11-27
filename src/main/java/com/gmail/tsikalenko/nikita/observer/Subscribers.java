@@ -49,11 +49,12 @@ public class Subscribers implements Observer {
     private void prepareFish() {
         System.out.println("Would you like buy smth?");
         String answ = scanner.nextLine();
-        if (answ.toLowerCase().equals("yes") || answ.toLowerCase().equals("y")) {
-            System.out.println("Chose a fish from list");
-            int fish = scanner.nextInt();
+        if (!answ.toLowerCase().equals("yes") || !answ.toLowerCase().equals("y")) {
+            return;
         }
-        System.out.println(new MaterFisherman(new ExperiencedFisherman(new NoviceFisherman())).makeJob());
+        System.out.println("Chose a fish from list");
+        int fish = scanner.nextInt();
+        System.out.println(new MasterFisherman(new ExperiencedFisherman(new NoviceFisherman())).makeJob());
         System.out.println("Chose a Package from list");
         int i = 1;
         for (Packages pckg : Packages.values()) {
