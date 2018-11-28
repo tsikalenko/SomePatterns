@@ -1,5 +1,7 @@
 package com.gmail.tsikalenko.nikita.singleton;
 
+import com.gmail.tsikalenko.nikita.observer.Malling;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +22,12 @@ public class Fishes {
 
     public void addFish(String newFish) {
         fishList.add(newFish);
+        Malling.getMalling().notifyAllObserver();
     }
 
-    public void removeFish(String fish) {
-        fishList.remove(fish);
+    public void removeFish(int index) {
+        fishList.remove(index);
+        Malling.getMalling().notifyAllObserver();
     }
 
     public List<String> getAllFish() {

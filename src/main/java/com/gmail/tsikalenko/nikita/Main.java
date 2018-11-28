@@ -6,15 +6,14 @@ import com.gmail.tsikalenko.nikita.singleton.Fishes;
 
 public class Main {
     public static void main(String[] args) {
+
+        Malling.getMalling().addObserver(new Subscribers("Neo", "nikita.tsikalenko@gmail.com"));
+        Malling.getMalling().addObserver(new Subscribers("Ki4", "sergeykichukki4@gmail.com"));
+        Malling.getMalling().addObserver(new Subscribers("Jet))", "smirnov.mykyta@gmail.com"));
+
         Fishes.getFishes().addFish("Salmom");
         Fishes.getFishes().addFish("Shark");
 
-        Malling malling = new Malling();
-
-        malling.addObserver(new Subscribers("Neo", "nikita.tsikalenko@gmail.com"));
-        malling.addObserver(new Subscribers("Ki4", "sergeykichukki4@gmail.com"));
-        malling.addObserver(new Subscribers("Jet))", "smirnov.mykyta@gmail.com"));
-
-        malling.notifyAllObserver();
+        Fishes.getFishes().removeFish(0);
     }
 }

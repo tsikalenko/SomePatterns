@@ -36,7 +36,7 @@ public class Subscribers implements Observer {
 
     public void handleEvent(List<String> list) {
 
-        System.out.println("Dear, " + login + "! We have new fish: ");
+        System.out.println("Dear, " + login + "! We have update in our offer: ");
         int i = 1;
         for (String fish : list) {
             System.out.println(i + ": " + fish);
@@ -49,7 +49,7 @@ public class Subscribers implements Observer {
     private void prepareFish() {
         System.out.println("Would you like buy smth?");
         String answ = scanner.nextLine();
-        if (!answ.toLowerCase().equals("yes") || !answ.toLowerCase().equals("y")) {
+        if (!answ.toLowerCase().equals("yes")) {
             return;
         }
         System.out.println("Chose a fish from list");

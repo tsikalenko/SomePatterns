@@ -6,8 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Malling implements Observed {
+    private static Malling malling;
 
-    List<Observer> subscraibers = new ArrayList<Observer>();
+    private List<Observer> subscraibers = new ArrayList<Observer>();
+
+    private Malling() {
+    }
+
+    public static synchronized Malling getMalling() {
+        if (malling == null) {
+            malling = new Malling();
+        }
+        return malling;
+    }
 
     public void addObserver(Observer observer) {
         subscraibers.add(observer);
